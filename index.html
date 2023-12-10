@@ -1,846 +1,1179 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xiaoting Kuang | Data Scientist, Machine Learning Engineer </title>
-  <meta name="description" content="Knowledge Base TailwindCSS HTML Template">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@600;700&display=swap" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Name of your web site">
+<meta name="author" content="Marketify">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Elisc</title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /STYLES -->
+
 </head>
 
-<body x-data="{ docs: false, mobile: false }" class="relative">
-  <header @click.outside="mobile = false"
-    class="sticky top-0 z-50 bg-white shadow-md shadow-slate-900/5 transition duration-500">
-    <div class="mx-auto max-w-7xl flex flex-wrap items-center space-x-8 justify-between px-6 lg:px-8 py-4">
-      <div class="flex items-center">
-        <button @click="docs = ! docs" type="button" class="relative lg:hidden mr-3" aria-label="Open navigation">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-            class="h-6 w-6 stroke-slate-500">
-            <path d="M4 7h16M4 12h16M4 17h16"></path>
-          </svg>
-        </button>
-        <a aria-label="Home page" href="/">
-          <img class="h-7 hidden sm:block" src="img/logo.svg" alt="Knowledge">
-          <img class="h-7 sm:hidden" src="img/logo-mark.svg" alt="Knowledge">
-        </a>
-        <nav class="hidden lg:flex lg:space-x-8 lg:ml-12 xl:ml-16">
-          <a href="doc.html"
-            class="text-sm hover:text-sky-500 py-2.5 text-slate-900 font-display font-semibold">Document</a>
-          <div class="relative" x-data="{ dropdown: false }">
-            <button type="button" @click.prevent="dropdown = ! dropdown"
-              :class="{ 'text-sky-500': dropdown, 'text-slate-900': !(dropdown) }"
-              class="group inline-flex transform-none items-center text-sm font-display font-semibold hover:text-sky-500 py-2.5 focus:outline-none text-slate-900"
-              aria-expanded="false">
-              <span>Dropdown</span><svg
-                :class="{ 'text-sky-500 rotate-180': dropdown, 'text-slate-900 transform-none': !(dropdown) }"
-                class="ml-0.5 h-5 w-5 group-hover:text-sky-500 text-slate-900 transform-none"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentcolor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414.0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414.0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg></button>
-            <div x-show="dropdown" :class="{ 'block': dropdown, 'hidden': !(dropdown) }"
-              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1"
-              x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150"
-              x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1"
-              @click.outside="dropdown = false"
-              class="absolute z-10 -ml-4 mt-3 w-screen max-w-[16rem] transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 hidden"
-              style="display: none;">
-              <div class="overflow-hidden rounded-2xl shadow-lg border border-slate-100">
-                <div class="relative grid gap-6 bg-white p-8 sm:gap-8"><a href="#"
-                    class="-m-4 flex items-start group rounded-xl p-4 text-slate-900 hover:text-sky-500">
-                    <div class="flex-shrink-0 mr-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="text-sm font-display font-semibold">Application setting</p>
-                    </div>
-                  </a>
-                  <a href="#" class="-m-4 flex items-start group rounded-xl p-4 text-slate-900 hover:text-sky-500">
-                    <div class="flex-shrink-0 mr-3">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M3.75 6C3.75 4.75736 4.75736 3.75 6 3.75H8.25C9.49264 3.75 10.5 4.75736 10.5 6V8.25c0 1.24264-1.00736 2.25-2.25 2.25H6c-1.24264.0-2.25-1.00736-2.25-2.25V6z"
-                          stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        </path>
-                        <path
-                          d="M3.75 15.75c0-1.2426 1.00736-2.25 2.25-2.25H8.25c1.24264.0 2.25 1.0074 2.25 2.25V18c0 1.2426-1.00736 2.25-2.25 2.25H6c-1.24264.0-2.25-1.0074-2.25-2.25V15.75z"
-                          stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        </path>
-                        <path
-                          d="M13.5 6c0-1.24264 1.0074-2.25 2.25-2.25H18c1.2426.0 2.25 1.00736 2.25 2.25V8.25c0 1.24264-1.0074 2.25-2.25 2.25H15.75c-1.2426.0-2.25-1.00736-2.25-2.25V6z"
-                          stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        </path>
-                        <path
-                          d="M13.5 15.75c0-1.2426 1.0074-2.25 2.25-2.25H18c1.2426.0 2.25 1.0074 2.25 2.25V18c0 1.2426-1.0074 2.25-2.25 2.25H15.75c-1.2426.0-2.25-1.0074-2.25-2.25V15.75z"
-                          stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        </path>
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="text-sm font-display font-semibold">Product features</p>
-                    </div>
-                  </a><a href="#" class="-m-4 flex items-start group rounded-xl p-4 text-slate-900 hover:text-sky-500">
-                    <div class="flex-shrink-0 mr-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="text-sm font-display font-semibold">Free resources</p>
-                    </div>
-                  </a><a href="#" class="-m-4 flex items-start group rounded-xl p-4 text-slate-900 hover:text-sky-500">
-                    <div class="flex-shrink-0 mr-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="text-sm font-display font-semibold">Video tutorials</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="contact.html"
-            class="text-sm hover:text-sky-500 py-2.5 text-slate-900 font-display font-semibold">Contact</a>
-        </nav>
-      </div>
-      <div class="flex items-center flex-1 justify-end">
-        <div class="w-full md:w-72 xl:w-96">
-          <div class="w-full">
-            <label for="search" class="sr-only">Search</label>
-            <div class="relative">
-              <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                <svg class="h-5 w-5 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </div>
-              <input id="search" name="search" data-minchars="1" data-maxitems="30"
-                class="block w-full rounded-md border-0 bg-white py-2.5 pl-10 pr-3 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-slate-300 sm:text-sm sm:leading-6"
-                placeholder="Search" type="search" autocomplete="off">
-            </div>
-          </div>
-        </div>
-        <button @click="mobile = ! mobile" type="button" class="relative lg:hidden ml-4" aria-label="Open navigation">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-            class="h-6 w-6 stroke-slate-500">
-            <path d="M4 7h16M4 12h16M4 17h16"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
+<body> 
+	
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="loader_line"></div>
+	</div>
+	<!-- /PRELOADER -->
+	
+	<!-- WRAPPER ALL -->
+	<div class="elisc_tm_all_wrap" data-magic-cursor="show" data-enter="fadeInLeft" data-exit=""> 
+			
+		<!-- MOBILE MENU -->
+		<div class="elisc_tm_topbar">
+			<div class="topbar_inner">
+				<div class="logo" data-type="image"> <!-- You can use text or image as logo. data-type values are: "image" and "text"  -->
+					<a class="image" href="#"><img src="img/logo/logo.png" alt="" /></a>
+					<a class="text" href="#"><span>R.Elisc</span></a>
+				</div>
+				<div class="trigger">
+					<div class="hamburger hamburger--slider">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="elisc_tm_mobile_menu">
+			<div class="inner">
+				<div class="wrapper">
+					<div class="avatar">
+						<div class="image" data-img-url="img/about/1.jpg"></div>
+					</div>
+					<div class="menu_list">
+						<ul class="transition_link">
+							<li class="active"><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#service">Services</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#news">Blog</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="social">
+						<ul>
+							<li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/instagram.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/dribbble.svg" alt="" /></a></li>
+							<li><a href="#"><img class="svg" src="img/svg/social/tik-tok.svg" alt="" /></a></li>
+						</ul>
+					</div>
+					<div class="copyright">
+						<p>Copyright &copy; 2023</p>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<!-- /MOBILE MENU -->
+				
+		<!-- SIDEBAR -->
+		<div class="elisc_tm_sidebar">
+			<div class="sidebar_inner">
+				<div class="author">
+					<div class="image">
+						<img src="img/thumbs/1-1.jpg" alt="" />
+						<div class="main" data-img-url="img/about/1.jpg"></div>
+					</div>
+					<div class="name">
+						<h3><span>Robert Elisc<span class="back">Robert Elisc</span></span></h3>
+					</div>
+				</div>
+				<div class="menu scrollable">
+					<ul class="transition_link">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#service">Services</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#news">Blog</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="icon-facebook-1"></i></a></li>
+							<li><a href="#"><i class="icon-twitter-1"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin-1"></i></a></li>
+						</ul>
+					</div>
+					<div class="text">
+						<p>Copyright © 2023 Robert Elisc. All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /SIDEBAR -->
+		
+		<!-- MAINPART -->
+		<div class="elisc_tm_mainpart">
+			<div class="mainpart_inner">
+			
+				<!-- HOME -->
+				<div class="elisc_tm_section animated" id="home">
+					<div class="elisc_tm_home">
+						<div class="tm_content">
+							<div class="details">
+								<div class="left">
+									<div class="title">
+										<h3>Hi, I'm <span class="blueColor">Elisc!</span></h3>
+										<h3>
+											<span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+												<span class="blc">Creative</span>
+												<span class="cd-words-wrapper">
+												  <b class="is-visible">Designer</b>
+												  <b>Coder</b>
+												  <b>Player</b>
+												</span>
+											</span>
+										</h3>
+										<h3>Based in Florida</h3>
+									</div>
+									<div class="subtitle">
+										<p>I'm a Florida based web designer &amp; front‑end developer with <span class="blueColor">10+ years</span> of experience</p>
+									</div>
+									<div class="buttons">
+										<div class="elisc_tm_button transition_link">
+											<a href="#portfolio">Got a project?</a>
+										</div>
+										<div class="elisc_tm_button transition_link" data-style="border">
+											<a href="#contact">Let's talk</a>
+										</div>
+									</div>
+									<div class="info">
+										<ul>
+											<li><a href="tel:+77 022 444 05 05">+77 022 444 05 05</a></li>
+											<li><a href="mailto:support@elisc.com">support@elisc.com</a></li>
+											<li><a class="href_location" href="#">Ave Street Avenue, New York</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="right">
+									<img src="img/about/2.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /HOME -->
+				
+				<!-- ABOUT -->
+				<div class="elisc_tm_section" id="about">
+					<div class="elisc_tm_about">
+						<div class="tm_content">
+							<div class="elisc_tm_biography">
+								<div class="left">
+									<div class="title">
+										<span class="mini">- Nice to meet you!</span>
+										<h3 class="name">Robert Elisc</h3>
+										<span class="job">
+											<span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+												<span class="blc">Web designer &amp;</span>
+												<span class="cd-words-wrapper">
+												  <b class="is-visible">Developer</b>
+												  <b>Coder</b>
+												  <b>Player</b>
+												</span>
+											</span>
+										</span>
+									</div>
+									<div class="elisc_tm_button transition_link">
+										<a href="#portfolio">Got a project?</a>
+									</div>
+								</div>
+								<div class="right">
+									<div class="text">
+										<p>Hello there! My name is <span class="yellowColor">Robert Elisc</span>. I am a web designer &amp; developer, and I'm very passionate and dedicated to my work.</p>
+										<p>With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
+									</div>
+									<div class="info">
+										<ul>
+											<li>
+												<span>Age</span>
+												<span>25</span>
+											</li>
+											<li>
+												<span>Born In</span>
+												<span><a class="href_location" href="#">Florida, USA</a></span>
+											</li>
+											<li>
+												<span>Mail</span>
+												<span><a href="mailto:support@elisc.com">support@elisc.com</a></span>
+											</li>
+											<li>
+												<span>Phone</span>
+												<span><a href="tel:+77 022 444 05 05">+77 022 444 05 05</a></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="elisc_tm_counter">
+								<ul>
+									<li>
+										<div class="list_inner">
+											<h3>10+</h3>
+											<span>Years of Experience</span>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<h3>50+</h3>
+											<span>Projects Completed</span>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<h3>30+</h3>
+											<span>Happy Clients</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="elisc_tm_experience">
+							<div class="tm_content">
+								<div class="elisc_tm_title">
+									<span>- Experience</span>
+									<h3>Everything about me!</h3>
+								</div>
+								<div class="list">
+									<ul>
+										<li>
+											<img class="popup_image" src="img/experience/1.jpg" alt="" />
+											<div class="list_inner">
+												<div class="short">
+													<div class="job">
+														<span class="yellowColor">-2018 - Present</span>
+														<h3>Web Developer</h3>
+													</div>
+													<div class="place">
+														<span>-Envato Market</span>
+													</div>
+												</div>
+												<div class="text">
+													<p>Website development is the process of building, programming, coding and maintaining websites and web applications.</p>
+												</div>
+												<a class="elisc_tm_full_link" href="#"></a>
+												
+												<!-- Modalbox Info Start -->
+												<div class="hidden_details">
+													<div class="descriptions">
+														<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+														<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+														<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+													</div>
+												</div>
+												<!-- /Modalbox Info Start -->
+												
+											</div>
+										</li>
+										<li>
+											<img class="popup_image" src="img/experience/2.jpg" alt="" />
+											<div class="list_inner">
+												<div class="short">
+													<div class="job">
+														<span class="yellowColor">-2016 - 2018</span>
+														<h3>Senior Designer</h3>
+													</div>
+													<div class="place">
+														<span>-ABC Studio</span>
+													</div>
+												</div>
+												<div class="text">
+													<p>Website development is the process of building, programming, coding and maintaining websites and web applications.</p>
+												</div>
+												<a class="elisc_tm_full_link" href="#"></a>
+												
+												<!-- Modalbox Info Start -->
+												<div class="hidden_details">
+													<div class="descriptions">
+														<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+														<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+														<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+													</div>
+												</div>
+												<!-- /Modalbox Info Start -->
+												
+											</div>
+										</li>
+										<li>
+											<img class="popup_image" src="img/experience/3.jpg" alt="" />
+											<div class="list_inner">
+												<div class="short">
+													<div class="job">
+														<span class="yellowColor">-2015 - 2016</span>
+														<h3>UX Designer</h3>
+													</div>
+													<div class="place">
+														<span>-Colorlib</span>
+													</div>
+												</div>
+												<div class="text">
+													<p>Website development is the process of building, programming, coding and maintaining websites and web applications.</p>
+												</div>
+												<a class="elisc_tm_full_link" href="#"></a>
+												
+												<!-- Modalbox Info Start -->
+												<div class="hidden_details">
+													<div class="descriptions">
+														<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+														<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+														<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+													</div>
+												</div>
+												<!-- /Modalbox Info Start -->
+												
+											</div>
+										</li>
+										<li>
+											<img class="popup_image" src="img/experience/4.jpg" alt="" />
+											<div class="list_inner">
+												<div class="short">
+													<div class="job">
+														<span class="yellowColor">-2013 - 2015</span>
+														<h3>Freelancer</h3>
+													</div>
+													<div class="place">
+														<span>-Vivaco Corp.</span>
+													</div>
+												</div>
+												<div class="text">
+													<p>Website development is the process of building, programming, coding and maintaining websites and web applications.</p>
+												</div>
+												<a class="elisc_tm_full_link" href="#"></a>
+												
+												<!-- Modalbox Info Start -->
+												<div class="hidden_details">
+													<div class="descriptions">
+														<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+														<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+														<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+													</div>
+												</div>
+												<!-- /Modalbox Info Start -->
+												
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /ABOUT -->
+				
+				<!-- SERVICES -->
+				<div class="elisc_tm_section" id="service">
+					<div class="elisc_tm_services">
+						<div class="tm_content">
+							<div class="elisc_tm_service_title">
+								<div class="elisc_tm_title">
+									<span>- Services</span>
+									<h3>My Services</h3>
+								</div>
+								<a href="mailto:support@elisc.com">support@elisc.com</a>
+							</div>
+							<div class="service_list">
+								<ul>
+									<li>
+										<img class="popup_image" src="img/service/2.jpg" alt="" />
+										<div class="list_inner">
+											<div class="details">
+												<div class="title">
+													<span>01</span>
+													<h3>Web Design</h3>
+												</div>
+												<div class="text">
+													<p>Web development is the process of building, programming...</p>
+												</div>
+												<div class="elisc_tm_read_more">
+													<a href="#">Read More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+												</div>
+											</div>
+											<a class="elisc_tm_full_link" href="#"></a>
 
-    <div x-show="mobile" :class="{ 'block': mobile, 'hidden': !(mobile) }" x-transition:enter="duration-200 ease-out"
-      x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-      x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100"
-      x-transition:leave-end="opacity-0 scale-95"
-      class="z-10 origin-top transform transition hidden lg:hidden border-y border-slate-200" style="display: none;">
-      <div class="overflow-hidden bg-white">
-        <div class="space-y-1 p-4 sm:p-6">
-          <div x-data="{ accordion: false }"><a href="#"
-              class="flex items-center rounded-lg px-4 py-3 text-base font-display font-semibold text-slate-900 hover:text-sky-500 hover:bg-slate-50"
-              @click.prevent="accordion = ! accordion"><span class="flex-1">Dropdown</span><svg
-                xmlns="http://www.w3.org/2000/svg" :class="{ 'rotate-90': accordion, 'transform-none': !(accordion) }"
-                class="h-6 w-6 transform-none" viewBox="0 0 20 20" fill="currentcolor">
-                <path fill-rule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414.0z"
-                  clip-rule="evenodd"></path>
-              </svg></a>
-            <div x-show="accordion" :class="{ 'block': accordion, 'hidden': !(accordion) }" class="hidden"
-              style="display: none;">
-              <a href="https://hugo-wireframe.netlify.app/heros/"
-                class="ml-4 flex items-center group rounded-lg px-4 py-3 text-slate-900 hover:text-sky-500 hover:bg-slate-50">
-                <div class="flex-shrink-0 mr-2.5 group-hover:text-sky-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <span class="text-base font-display font-semibold">Application setting</span>
-              </a>
-              <a href="https://hugo-wireframe.netlify.app/features/"
-                class="ml-4 flex items-center group rounded-lg px-4 py-3 text-slate-900 hover:text-sky-500 hover:bg-slate-50">
-                <div class="flex-shrink-0 mr-2.5 group-hover:text-sky-500">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M3.75 6C3.75 4.75736 4.75736 3.75 6 3.75H8.25C9.49264 3.75 10.5 4.75736 10.5 6V8.25c0 1.24264-1.00736 2.25-2.25 2.25H6c-1.24264.0-2.25-1.00736-2.25-2.25V6z"
-                      stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    </path>
-                    <path
-                      d="M3.75 15.75c0-1.2426 1.00736-2.25 2.25-2.25H8.25c1.24264.0 2.25 1.0074 2.25 2.25V18c0 1.2426-1.00736 2.25-2.25 2.25H6c-1.24264.0-2.25-1.0074-2.25-2.25V15.75z"
-                      stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    </path>
-                    <path
-                      d="M13.5 6c0-1.24264 1.0074-2.25 2.25-2.25H18c1.2426.0 2.25 1.00736 2.25 2.25V8.25c0 1.24264-1.0074 2.25-2.25 2.25H15.75c-1.2426.0-2.25-1.00736-2.25-2.25V6z"
-                      stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    </path>
-                    <path
-                      d="M13.5 15.75c0-1.2426 1.0074-2.25 2.25-2.25H18c1.2426.0 2.25 1.0074 2.25 2.25V18c0 1.2426-1.0074 2.25-2.25 2.25H15.75c-1.2426.0-2.25-1.0074-2.25-2.25V15.75z"
-                      stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    </path>
-                  </svg>
-                </div><span class="text-base font-display font-semibold">Product features</span>
-              </a>
-              <a href="https://hugo-wireframe.netlify.app/testimonials/"
-                class="ml-4 flex items-center group rounded-lg px-4 py-3 text-slate-900 hover:text-sky-500 hover:bg-slate-50">
-                <div class="flex-shrink-0 mr-2.5 group-hover:text-sky-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                  </svg>
-                </div><span class="text-base font-display font-semibold">Free resources</span>
-              </a>
-              <a href="https://hugo-wireframe.netlify.app/galleries/"
-                class="ml-4 flex items-center group rounded-lg px-4 py-3 text-slate-900 hover:text-sky-500 hover:bg-slate-50">
-                <div class="flex-shrink-0 mr-2.5 group-hover:text-sky-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
-                  </svg>
-                </div>
-                <span class="text-base font-display font-semibold">Video tutorials</span>
-              </a>
-            </div>
-          </div>
-          <a href="doc.html"
-            class="block rounded-lg px-4 py-3 text-base font-display font-semibold text-slate-900 hover:text-sky-500 hover:bg-slate-50">Document</a>
-          <a href="contact.html"
-            class="block rounded-lg px-4 py-3 text-base font-display font-semibold text-slate-900 hover:text-sky-500 hover:bg-slate-50">Contact</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Live Awesomplete Search 
-      var inputNavbar = document.getElementById("search");
-      var list = [{
-          label: "How do I enable payment gateway?",
-          value: "doc.html"
-        },
-        {
-          label: "What happens if I clear cache?",
-          value: "doc.html"
-        },
-        {
-          label: "Which payment methods do you offer?",
-          value: "doc.html"
-        },
-        {
-          label: "How long does it take to propagate DNS settings?",
-          value: "doc.html"
-        },
-        {
-          label: "How can I force SSL certificate?",
-          value: "doc.html"
-        }
-      ];
-      if (inputNavbar) {
-        inputNavbar.addEventListener("awesomplete-selectcomplete", function(e) {
-          window.location.href = e.text.value;
-        }, false);
-        new Awesomplete(inputNavbar, {
-          autoFirst: true,
-          list: list,
-          replace: function(suggestion) {
-            this.input.value = suggestion.label;
-          }
-        });
-      }
-    });
-  </script>
+											<!-- Modalbox Info Start -->
+											<div class="hidden_details">
+												<div class="descriptions">
+													<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+													<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+													<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+												</div>
+											</div>
+											<!-- /Modalbox Info Start -->
 
-  <div class="relative mx-auto flex max-w-7xl justify-center px-2 lg:px-8">
-    <div class="hidden lg:relative lg:block lg:flex-none">
-      <div
-        class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] w-64 overflow-y-auto overflow-x-hidden pt-16 pl-0.5 pr-8 xl:w-72 xl:pr-16">
-        <nav class="text-sm">
-          <ul class="space-y-9">
-            <li>
-              <h2 class="font-display font-semibold text-slate-900">Introduction</h2>
-              <ul class="mt-4 space-y-4 border-slate-200">
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500"
-                    href="/">Overview</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Getting started</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Installation</a></li>
-              </ul>
-            </li>
-            <li>
-              <h2 class="font-display font-semibold text-slate-900">Core concepts</h2>
-              <ul class="mt-4 space-y-4 border-slate-200">
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Understanding flow</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Predicting user journey</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Basics of design</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Introduction to development</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">The load effect</a></li>
-              </ul>
-            </li>
-            <li>
-              <h2 class="font-display font-semibold text-slate-900">Advanced guides</h2>
-              <ul class="mt-4 space-y-4 border-slate-200">
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Writing plugins</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Neuralink integration</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Temporal paradoxes</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Testing blocks</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Compile-time caching</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Predictive data generation</a></li>
-              </ul>
-            </li>
-            <li>
-              <h2 class="font-display font-semibold text-slate-900">API reference</h2>
-              <ul class="mt-4 space-y-4 border-slate-200">
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">FetchAdvance.load()</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">GetAdvance.get()</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">UploadAdvance.load()</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">LoadAdvance.push()</a></li>
-              </ul>
-            </li>
-            <li>
-              <h2 class="font-display font-semibold text-slate-900">Contributing</h2>
-              <ul class="mt-4 space-y-4 border-slate-200">
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">How to contribute</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Architecture guide</a></li>
-                <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                    href="doc.html">Design principles</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="min-w-0 max-w-4xl flex-auto px-4 pt-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:pl-16">
-      <div>
-        <div>
-          <p class="font-display text-sm font-bold text-sky-500 mb-1">Introduction</p>
-          <h1 class="font-display text-3xl tracking-tight text-slate-900 font-bold">Overview</h1>
-          <p class="text-lg leading-relaxed text-slate-500 mt-8 max-w-2xl">湾区data打工人，leetcode刷题本，系统设计学习笔记本</p>
-        </div>
-        <hr class="border-slate-200 mt-9 mb-14">
+										</div>
+									</li>
+									<li>
+										<img class="popup_image" src="img/service/3.jpg" alt="" />
+										<div class="list_inner">
+											<div class="details">
+												<div class="title">
+													<span>02</span>
+													<h3>UI/UX Design</h3>
+												</div>
+												<div class="text">
+													<p>Web development is the process of building, programming...</p>
+												</div>
+												<div class="elisc_tm_read_more">
+													<a href="#">Read More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+												</div>
+											</div>
+											<a class="elisc_tm_full_link" href="#"></a>
 
-        <div class="grid grid-cols-1 gap-6 md:gap-x-12 md:gap-y-14 md:grid-cols-2">
+											<!-- Modalbox Info Start -->
+											<div class="hidden_details">
+												<div class="descriptions">
+													<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+													<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+													<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+												</div>
+											</div>
+											<!-- /Modalbox Info Start -->
 
-          <div class="relative rounded-xl p-6 shadow-xl shadow-slate-200 bg-sky-500 group overflow-hidden">
-            <div class="relative">
-              <h2 class="font-display font-bold text-xl text-white">Ready to get started?</h2>
-              <p class="mt-2 text-base text-slate-100 leading-relaxed max-w-[18rem]">Step-by-step guides to setting up
-                your
-                system and installing the library.</p>
-              <div
-                class="inline-block mt-4 rounded-md bg-sky-600 px-2.5 py-1.5 text-sm font-semibold font-display text-white group-hover:bg-sky-700">
-                Quick start</div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.4"
-              stroke="currentColor" class="absolute bottom-0 right-2 text-sky-400 w-36 h-36">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-            </svg>
-            <a href="doc.html" class="absolute inset-0" aria-label="Category"></a>
-          </div>
+										</div>
+									</li>
+									<li>
+										<img class="popup_image" src="img/service/4.jpg" alt="" />
+										<div class="list_inner">
+											<div class="details">
+												<div class="title">
+													<span>03</span>
+													<h3>Mobile Application</h3>
+												</div>
+												<div class="text">
+													<p>Web development is the process of building, programming...</p>
+												</div>
+												<div class="elisc_tm_read_more">
+													<a href="#">Read More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+												</div>
+											</div>
+											<a class="elisc_tm_full_link" href="#"></a>
 
-          <div class="relative rounded-xl p-6 shadow-xl shadow-slate-200 bg-sky-500 group">
-            <div class="relative">
-              <h2 class="font-display font-bold text-xl text-white">New to platform?</h2>
-              <p class="mt-2 text-base text-slate-100 leading-relaxed max-w-[18rem]">Step-by-step guides to setting up
-                your
-                system and installing the library.</p>
-              <div
-                class="inline-block mt-4 rounded-md bg-sky-600 px-2.5 py-1.5 text-sm font-semibold font-display text-white group-hover:bg-sky-700">
-                Try tutorial</div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.4"
-              stroke="currentColor" class="absolute bottom-0 right-2 text-sky-400 w-36 h-36">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-            </svg>
-            <a href="doc.html" class="absolute inset-0" aria-label="Category"></a>
-          </div>
+											<!-- Modalbox Info Start -->
+											<div class="hidden_details">
+												<div class="descriptions">
+													<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+													<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+													<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+												</div>
+											</div>
+											<!-- /Modalbox Info Start -->
 
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Core concepts</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
+										</div>
+									</li>
+									<li>
+										<img class="popup_image" src="img/service/5.jpg" alt="" />
+										<div class="list_inner">
+											<div class="details">
+												<div class="title">
+													<span>04</span>
+													<h3>User Research</h3>
+												</div>
+												<div class="text">
+													<p>Web development is the process of building, programming...</p>
+												</div>
+												<div class="elisc_tm_read_more">
+													<a href="#">Read More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+												</div>
+											</div>
+											<a class="elisc_tm_full_link" href="#"></a>
 
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Tutorials</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
+											<!-- Modalbox Info Start -->
+											<div class="hidden_details">
+												<div class="descriptions">
+													<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+													<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+													<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+												</div>
+											</div>
+											<!-- /Modalbox Info Start -->
 
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  How-to guides</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Reference guides</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Conceptual guides</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-xl group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Video library</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
+										</div>
+									</li>
+									<li>
+										<img class="popup_image" src="img/service/6.jpg" alt="" />
+										<div class="list_inner">
+											<div class="details">
+												<div class="title">
+													<span>05</span>
+													<h3>Animation</h3>
+												</div>
+												<div class="text">
+													<p>Web development is the process of building, programming...</p>
+												</div>
+												<div class="elisc_tm_read_more">
+													<a href="#">Read More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+												</div>
+											</div>
+											<a class="elisc_tm_full_link" href="#"></a>
 
-          <div
-            class="md:col-span-2 relative rounded-xl p-8 shadow-xl shadow-slate-200 bg-sky-950 group overflow-hidden">
-            <div class="relative">
-              <h2 class="font-display font-bold text-2xl text-white">Ready to get started?</h2>
-              <p class="mt-3 text-base text-slate-100 leading-relaxed max-w-2xl">Step-by-step guides to setting up your
-                system and installing the library atep-by-step guides to setting up your
-                system and installing the library.</p>
-              <div
-                class="inline-block mt-6 rounded-md bg-sky-500 px-3.5 py-2 text-sm font-semibold font-display text-white group-hover:bg-sky-600">
-                Quick start</div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.3"
-              stroke="currentColor" class="absolute bottom-2 right-6 text-sky-900 w-44 h-44">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-            </svg>
-            <a href="doc.html" class="absolute inset-0" aria-label="Category"></a>
-          </div>
+											<!-- Modalbox Info Start -->
+											<div class="hidden_details">
+												<div class="descriptions">
+													<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+													<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+													<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+												</div>
+											</div>
+											<!-- /Modalbox Info Start -->
 
-        </div>
-      </div>
-    </div>
-  </div>
+										</div>
+									</li>
+									<li>
+										<img class="popup_image" src="img/service/7.jpg" alt="" />
+										<div class="list_inner">
+											<div class="details">
+												<div class="title">
+													<span>06</span>
+													<h3>Game Development</h3>
+												</div>
+												<div class="text">
+													<p>Web development is the process of building, programming...</p>
+												</div>
+												<div class="elisc_tm_read_more">
+													<a href="#">Read More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+												</div>
+											</div>
+											<a class="elisc_tm_full_link" href="#"></a>
 
-  <footer>
-    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 lg:pt-28">
-      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-        <div class="grid grid-cols-2 gap-8 xl:col-span-2">
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-sm font-display font-semibold text-slate-900">Solutions</h3>
-              <ul class="mt-5 space-y-4">
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Marketing</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Analytics</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Commerce</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Insights</a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-10 md:mt-0">
-              <h3 class="text-sm font-display font-semibold text-slate-900">Support</h3>
-              <ul class="mt-5 space-y-4">
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Pricing</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Documentation</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Guides</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">API Status</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-sm font-display font-semibold text-slate-900">Company</h3>
-              <ul class="mt-5 space-y-4">
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">About</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Blog</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Jobs</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Press</a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-10 md:mt-0">
-              <h3 class="text-sm font-display font-semibold text-slate-900">Legal</h3>
-              <ul class="mt-5 space-y-4">
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Claim</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Privacy</a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Terms</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="mt-10 xl:mt-0">
-          <h3 class="text-sm font-display font-semibold text-slate-900">Subscribe to our newsletter</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-500">The latest news, articles, and resources, sent to your
-            inbox weekly.</p>
-          <form class="mt-6 sm:flex sm:max-w-md">
-            <label for="email-address" class="sr-only">Email address</label>
-            <input type="email" name="email-address" id="email-address" autocomplete="email" required
-              class="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-slate-300 sm:w-64 sm:text-sm xl:w-full"
-              placeholder="Enter your email">
-            <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-              <button type="submit"
-                class="flex w-full items-center justify-center rounded-md bg-sky-500 px-3 py-2 text-sm font-display font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="mt-16 border-t border-slate-200 pt-8 md:flex md:items-center md:justify-between">
-        <div class="flex space-x-6 md:order-2">
-          <a href="#" class="text-slate-400 hover:text-slate-500">
-            <span class="sr-only">Twitter</span>
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-            </svg>
-          </a>
-          <a href="#" class="text-slate-400 hover:text-slate-500">
-            <span class="sr-only">GitHub</span>
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-          <a href="#" class="text-slate-400 hover:text-slate-500">
-            <span class="sr-only">YouTube</span>
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-          <a href="#" class="text-slate-400 hover:text-slate-500">
-            <span class="sr-only">Facebook</span>
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-          <a href="#" class="text-slate-400 hover:text-slate-500">
-            <span class="sr-only">Instagram</span>
-            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-        <p class="mt-8 text-xs leading-5 text-slate-500 md:order-1 md:mt-0">&copy; 2020 Awesome Company, Ltd. All rights
-          reserved.</p>
-      </div>
-    </div>
-  </footer>
+											<!-- Modalbox Info Start -->
+											<div class="hidden_details">
+												<div class="descriptions">
+													<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+													<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+													<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Elisc, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+												</div>
+											</div>
+											<!-- /Modalbox Info Start -->
 
-  <div x-show="docs"
-    class="fixed inset-0 overflow-y-auto overflow-x-hidden bg-slate-900/20 backdrop-blur z-50 transform transition lg:hidden"
-    style="display: none;">
-    <div @click.outside="docs = false" class="min-h-full w-full bg-white max-w-xs pt-7 pb-16 px-6 xl:pr-16">
-      <div class="flex justify-end">
-        <button @click="docs = ! docs" type="button"
-          class="inline-flex items-center justify-center text-slate-500 hover:text-sky-500 focus:outline-none"
-          aria-expanded="false">
-          <span class="sr-only">Toggle main menu</span>
-          <svg class="hh-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentcolor"
-            aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <nav>
-        <ul class="space-y-9">
-          <li>
-            <h2 class="font-display font-semibold text-slate-900">Introduction</h2>
-            <ul class="mt-3 space-y-3">
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500"
-                  href="/">Overview</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Getting started</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Installation</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2 class="font-display font-semibold text-slate-900">Core concepts</h2>
-            <ul class="mt-3 space-y-3">
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Understanding caching</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Predicting user behavior</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Basics of time-travel</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Introduction to string theory</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">The butterfly effect</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2 class="font-display font-semibold text-slate-900">Advanced guides</h2>
-            <ul class="mt-3 space-y-3">
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Writing plugins</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Neuralink integration</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Temporal paradoxes</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Testing</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Compile-time caching</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Predictive data generation</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2 class="font-display font-semibold text-slate-900">API reference</h2>
-            <ul class="mt-3 space-y-3">
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">CacheAdvance.predict()</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">CacheAdvance.flush()</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">CacheAdvance.revert()</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">CacheAdvance.regret()</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2 class="font-display font-semibold text-slate-900">Contributing</h2>
-            <ul class="mt-3 space-y-3">
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">How to contribute</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Architecture guide</a></li>
-              <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
-                  href="doc.html">Design principles</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="elisc_tm_video">
+								<img class="placeholder" src="img/thumbs/4-2.jpg" alt="" />
+								<div class="image" data-img-url="img/service/1.jpg"></div>
+								<div class="overlay"></div>
+								<span class="play"><img class="svg" src="img/svg/play.svg" alt="" /></span>
+								<div class="text">
+									<h3>Intro Video</h3>
+								</div>
+								<a class="elisc_tm_full_link popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /SERVICES -->
+				
+				<!-- PORTFOLIO -->
+				<div class="elisc_tm_section" id="portfolio">
+					<div class="elisc_tm_portfolio">
+						<div class="tm_content">
+							<div class="elisc_tm_portfolio_title">
+								<div class="elisc_tm_title">
+									<span>- Projects</span>
+									<h3>Recent completed works</h3>
+								</div>
+								<div class="buttons">
+									<a class="prev_button" href="#"><img class="svg" src="img/svg/prev.svg" alt="" /></a>
+									<a class="next_button" href="#"><img class="svg" src="img/svg/next.svg" alt="" /></a>
+								</div>
+							</div>
+							<div class="portfolio_list">
+								<ul class="owl-carousel gallery_zoom">
+									<li>
+										<div class="list_inner">
+											<div class="image">
+												<img src="img/thumbs/31-36.jpg" alt="" />
+												<div class="main" data-img-url="img/portfolio/1.jpg"></div>
+												<a class="elisc_tm_full_link popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas"></a>
+											</div>
+											<div class="details">
+												<span class="category"><a href="#">Youtube</a></span>
+												<h3 class="title"><a class="line_effect popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas">New Technology</a></h3>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<div class="image">
+												<img src="img/thumbs/31-36.jpg" alt="" />
+												<div class="main" data-img-url="img/portfolio/2.jpg"></div>
+												<a class="elisc_tm_full_link popup-vimeo" href="https://vimeo.com/337293658"></a>
+											</div>
+											<div class="details">
+												<span class="category"><a href="#">Vimeo</a></span>
+												<h3 class="title"><a class="line_effect popup-vimeo" href="https://vimeo.com/337293658">Firogo Majestic Ltd.</a></h3>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<div class="image">
+												<img src="img/thumbs/31-36.jpg" alt="" />
+												<div class="main" data-img-url="img/portfolio/3.jpg"></div>
+												<a class="elisc_tm_full_link soundcloude_link mfp-iframe audio" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></a>
+											</div>
+											<div class="details">
+												<span class="category"><a href="#">Soundcloud</a></span>
+												<h3 class="title"><a class="line_effect soundcloude_link mfp-iframe audio" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">Creative Building</a></h3>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<div class="image">
+												<img src="img/thumbs/31-36.jpg" alt="" />
+												<div class="main" data-img-url="img/portfolio/4.jpg"></div>
+												<a class="elisc_tm_full_link portfolio_popup" href="#"></a>
+											</div>
+											<div class="details">
+												<span class="category"><a href="#">Modalbox</a></span>
+												<h3 class="title"><a class="line_effect portfolio_popup" href="#">Beautiful Boat</a></h3>
+											</div>
+										</div>
+										
+										<!-- Modalbox Info Start -->
+										<div class="hidden_content_portfolio">
+											<div class="popup_details">
+												<div class="main_details">
+													<div class="textbox">
+														<p>We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible. Building mockups strikes the ideal balance ease of modification. Building mockups strikes the ideal balance ease of modification.</p>
+														<p>Mockups are useful both for the creative phase of the project - for instance when you're trying to figure out your user flows or the proper visual hierarchy - and the production phase when they phase when they will represent the target product. Building mockups strikes the ideal balance ease of modification.</p>
+													</div>
+													<div class="detailbox">
+														<ul>
+															<li>
+																<span class="first">Client</span>
+																<span>Alvaro Morata</span>
+															</li>
+															<li>
+																<span class="first">Category</span>
+																<span><a href="#">Modalbox</a></span>
+															</li>
+															<li>
+																<span class="first">Date</span>
+																<span>April 10, 2023</span>
+															</li>
+															<li>
+																<span class="first">Share</span>
+																<ul class="share">
+																	<li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt="" /></a></li>
+																	<li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt="" /></a></li>
+																	<li><a href="#"><img class="svg" src="img/svg/social/instagram.svg" alt="" /></a>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="additional_images">
+													<ul>
+														<li>
+															<div class="list_inner">
+																<div class="my_image">
+																	<img src="img/thumbs/4-2.jpg" alt="" />
+																	<div class="main" data-img-url="img/portfolio/5.jpg"></div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="list_inner">
+																<div class="my_image">
+																	<img src="img/thumbs/4-2.jpg" alt="" />
+																	<div class="main" data-img-url="img/portfolio/6.jpg"></div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="list_inner">
+																<div class="my_image">
+																	<img src="img/thumbs/4-2.jpg" alt="" />
+																	<div class="main" data-img-url="img/portfolio/7.jpg"></div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- /Modalbox Info Start -->
+										
+									</li>
+								</ul>
+								<div class="elisc_tm_button" data-position="center">
+									<a href="#">View all projects</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- PARTNERS -->
+					<div class="elisc_tm_partners">
+						<div class="tm_content">
+							<div class="elisc_tm_title">
+								<span>- Clients</span>
+								<h3>Customers &amp; clients</h3>
+							</div>
+							<div class="partners_inner">
+						<ul>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/1.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/2.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/3.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/4.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/5.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/6.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/7.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="list_inner">
+									<img src="img/partners/8.png" alt="" />
+									<a class="elisc_tm_full_link" a href="#"></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+						</div>
+					</div>
+					<!-- /PARTNERS -->
+					
+					<!-- TESTIMONIALS -->
+					<div class="elisc_tm_testimonial_wrapper">
+						<div class="tm_content">
+							<div class="elisc_tm_testimonials">
+								<div class="elisc_tm_title" data-position="center">
+									<span>- Testimonial</span>
+									<h3>What client's say?</h3>
+								</div>
+								<div class="testimonials_list">
+									<ul class="owl-carousel owl-theme">
+									<li>
+										<div class="text">
+											<p>I rarely like to write reviews, but the Marketify team truly deserve a standing ovation for their customer support, customisation and most importantly, friendliness and professionalism.</p>
+										</div>
+										<div class="short">
+											<div class="image">
+												<div class="main" data-img-url="img/testimonials/1.jpg"></div>
+											</div>
+											<div class="detail">
+												<h3>John Doe</h3>
+											</div>
+										</div>
+										<p class="job">User Interface Design at PCL Lab</p>
+									</li>
+									<li>
+										<div class="text">
+											<p>Really the Code Quality, Customer Support, and design are awesome and its good support they are giving. They give an instant solution to our needs. Really awesome. I will strongly recommend to my friends.</p>
+										</div>
+										<div class="short">
+											<div class="image">
+												<div class="main" data-img-url="img/testimonials/2.jpg"></div>
+											</div>
+											<div class="detail">
+												<h3>Keita Smith</h3>
+											</div>
+										</div>
+										<p class="job">Senior Designer at Behance</p>
+									</li>
+									<li>
+										<div class="text">
+											<p>Loved the template design, documentation, customizability and the customer support from Marketify team! I am a noob in programming but the Marketify team helped me successfully.</p>
+										</div>
+										<div class="short">
+											<div class="image">
+												<div class="main" data-img-url="img/testimonials/3.jpg"></div>
+											</div>
+											<div class="detail">
+												<h3>Alan Walker</h3>
+											</div>
+										</div>
+										<p class="job">Sales Manager at Vivaco Shop</p>
+									</li>
+								</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- /TESTIMONIALS -->
+				</div>
+				<!-- /PORTFOLIO -->
+				
+				<!-- NEWS -->
+				<div class="elisc_tm_section" id="news">
+					<div class="elisc_tm_news fn_w_sminiboxes">
+						<div class="tm_content">
+							<div class="wrapper">
+								<div class="left fn_w_sminibox">
+									<div class="elisc_tm_sticky_section">
+										<div class="elisc_tm_title">
+											<span>- Blog</span>
+											<h3>My blog &amp; news</h3>
+										</div>
+										<div class="elisc_tm_button transition_link">
+											<a href="#contact">Get in touch</a>
+										</div>
+									</div>
+								</div>
+								<div class="right fn_w_sminibox">
+									<div class="elisc_tm_sticky_section">
+										<div class="list">
+											<ul>
+												<li>
+													<img class="popup_image" src="img/news/1.jpg" alt="" />
+													<div class="list_inner">
+														<div class="info">
+															<div class="meta">
+																<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>April 12, 2023</span>
+															</div>
+															<div class="title">
+																<h3><a href="#">12 unique examples of portfolio websites</a></h3>
+															</div>
+														</div>
+														<div class="elisc_tm_read_more">
+															<a class="line_effect" href="#">Learn More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+														</div>
+
+														<!-- Modalbox Info Start -->
+														<div class="news_hidden_details">
+															<div class="news_popup_informations">
+																<div class="text">
+																	<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+																	<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+																	<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+																</div>
+															</div>
+														</div>
+														<!-- /Modalbox Info End -->
+
+													</div>
+												</li>
+												<li>
+													<img class="popup_image" src="img/news/2.jpg" alt="" />
+													<div class="list_inner">
+														<div class="info">
+															<div class="meta">
+																<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>April 01, 2023</span>
+															</div>
+															<div class="title">
+																<h3><a href="#">Dealing with spring allergy symptoms</a></h3>
+															</div>
+														</div>
+														<div class="elisc_tm_read_more">
+															<a class="line_effect" href="#">Learn More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+														</div>
+
+														<!-- Modalbox Info Start -->
+														<div class="news_hidden_details">
+															<div class="news_popup_informations">
+																<div class="text">
+																	<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+																	<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+																	<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+																</div>
+															</div>
+														</div>
+														<!-- /Modalbox Info End -->
+
+													</div>
+												</li>
+												<li>
+													<img class="popup_image" src="img/news/3.jpg" alt="" />
+													<div class="list_inner">
+														<div class="info">
+															<div class="meta">
+																<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>March 30, 2023</span>
+															</div>
+															<div class="title">
+																<h3><a href="#">Why we should read fewer books</a></h3>
+															</div>
+														</div>
+														<div class="elisc_tm_read_more">
+															<a class="line_effect" href="#">Learn More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+														</div>
+
+														<!-- Modalbox Info Start -->
+														<div class="news_hidden_details">
+															<div class="news_popup_informations">
+																<div class="text">
+																	<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+																	<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+																	<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+																</div>
+															</div>
+														</div>
+														<!-- /Modalbox Info End -->
+
+													</div>
+												</li>
+												<li>
+													<img class="popup_image" src="img/news/4.jpg" alt="" />
+													<div class="list_inner">
+														<div class="info">
+															<div class="meta">
+																<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>March 15, 2023</span>
+															</div>
+															<div class="title">
+																<h3><a href="#">Skills and tools for efficient web design</a></h3>
+															</div>
+														</div>
+														<div class="elisc_tm_read_more">
+															<a class="line_effect" href="#">Learn More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+														</div>
+
+														<!-- Modalbox Info Start -->
+														<div class="news_hidden_details">
+															<div class="news_popup_informations">
+																<div class="text">
+																	<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+																	<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+																	<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+																</div>
+															</div>
+														</div>
+														<!-- /Modalbox Info End -->
+
+													</div>
+												</li>
+												<li>
+													<img class="popup_image" src="img/news/5.jpg" alt="" />
+													<div class="list_inner">
+														<div class="info">
+															<div class="meta">
+																<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>Feb 20, 2023</span>
+															</div>
+															<div class="title">
+																<h3><a href="#">How to use python for web scraping</a></h3>
+															</div>
+														</div>
+														<div class="elisc_tm_read_more">
+															<a class="line_effect" href="#">Learn More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+														</div>
+
+														<!-- Modalbox Info Start -->
+														<div class="news_hidden_details">
+															<div class="news_popup_informations">
+																<div class="text">
+																	<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+																	<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+																	<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+																</div>
+															</div>
+														</div>
+														<!-- /Modalbox Info End -->
+
+													</div>
+												</li>
+												<li>
+													<img class="popup_image" src="img/news/6.jpg" alt="" />
+													<div class="list_inner">
+														<div class="info">
+															<div class="meta">
+																<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>Feb 11, 2023</span>
+															</div>
+															<div class="title">
+																<h3><a href="#">Best wireframe tools for web designers</a></h3>
+															</div>
+														</div>
+														<div class="elisc_tm_read_more">
+															<a class="line_effect" href="#">Learn More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+														</div>
+
+														<!-- Modalbox Info Start -->
+														<div class="news_hidden_details">
+															<div class="news_popup_informations">
+																<div class="text">
+																	<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+																	<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+																	<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+																</div>
+															</div>
+														</div>
+														<!-- /Modalbox Info End -->
+
+													</div>
+												</li>
+												<li>
+													<img class="popup_image" src="img/news/7.jpg" alt="" />
+													<div class="list_inner">
+														<div class="info">
+															<div class="meta">
+																<img class="svg" src="img/svg/calendar.svg" alt="" /> <span>Jan 31, 2023</span>
+															</div>
+															<div class="title">
+																<h3><a href="#">Why we’re crazy about animations</a></h3>
+															</div>
+														</div>
+														<div class="elisc_tm_read_more">
+															<a class="line_effect" href="#">Learn More<span><img class="svg" src="img/svg/rightArrow.svg" alt="" /></span></a>
+														</div>
+
+														<!-- Modalbox Info Start -->
+														<div class="news_hidden_details">
+															<div class="news_popup_informations">
+																<div class="text">
+																	<p>Elisc is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+																	<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+																	<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+																</div>
+															</div>
+														</div>
+														<!-- /Modalbox Info End -->
+
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /NEWS -->
+				
+				<!-- CONTACT -->
+				<div class="elisc_tm_section" id="contact">
+					<div class="elisc_tm_contact">
+						<div class="tm_content">
+							<div class="wrapper">
+								<div class="left">
+									<div class="elisc_tm_title">
+										<span>- Let's Connect</span>
+										<h3>Get in touch</h3>
+									</div>
+									<div class="text">
+										<p>I'm currently avaliable to take on new projects, so feel free to send me a message about anything that you want to run past me. You can contact anytime at 24/7</p>
+									</div>
+									<div class="info">
+										<ul>
+											<li>
+												<a href="tel:+77 022 444 05 05">+77 022 444 05 05</a>
+											</li>
+											<li>
+												<a href="mailto:support@elisc.com">support@elisc.com</a>
+											</li>
+											<li>
+												<a class="href_location" href="#">Ave Street Avenue, New York</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="right">
+									<div class="fields">
+										<form action="/" method="post" class="contact_form" id="contact_form">
+											<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+											<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+											<div class="first">
+												<ul>
+													<li>
+														<input id="name" type="text" placeholder="Enter your name" autocomplete="off">
+													</li>
+													<li>
+														<input id="email" type="text" placeholder="Your email" autocomplete="off">
+													</li>
+												</ul>
+											</div>
+											<div class="last">
+												<textarea id="message" placeholder="Write something..."></textarea>
+											</div>
+											<div class="elisc_tm_button">
+												<a id="send_message" href="#">Submit now</a>
+											</div>
+
+											<!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->
+
+										</form>
+									</div>
+								</div>
+							</div>	
+							
+							<div class="elisc_tm_map">
+								<div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="375" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon"></a><br><style>.mapouter{position:relative;text-align:right;height:375px;width:100%;}</style><a href="https://www.embedgooglemap.net">how to add google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:375px;width:100%;}</style></div></div>
+
+								<!-- Get your API here https://www.embedgooglemap.net -->
+							</div>
+																							
+						</div>
+					</div>
+				</div>
+				<!-- /CONTACT -->
+				
+			</div>
+		</div>
+		<!-- /MAINPART -->
+		
+		<!-- CURSOR -->
+		<div class="mouse-cursor cursor-outer"></div>
+		<div class="mouse-cursor cursor-inner"></div>
+		<!-- /CURSOR -->
+		
+	</div>
+	<!-- / WRAPPER ALL -->
+	
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
+<script src="js/plugins.js"></script>
+<script src="js/init.js"></script>
+<!-- /SCRIPTS -->
 
 </body>
 </html>
