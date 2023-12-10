@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowledge | Knowledge Base HTML Template</title>
+  <title>Getting started | Knowledge Base HTML Template</title>
   <meta name="description" content="Knowledge Base TailwindCSS HTML Template">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -237,6 +237,9 @@
       </div>
     </div>
   </header>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" integrity="sha512-HcBl0GSJvt4Qecm4srHapirUx0HJDi2zYXm6KUKNNUGdTIN9cBwakVZHWmRVj4MKgy1AChqhWGYcMDbRKgO0zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       // Live Awesomplete Search 
@@ -287,10 +290,10 @@
               <h2 class="font-display font-semibold text-slate-900">Introduction</h2>
               <ul class="mt-4 space-y-4 border-slate-200">
                 <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500"
+                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
                     href="/">Overview</a></li>
                 <li class="relative"><a
-                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
+                    class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500"
                     href="doc.html">Getting started</a></li>
                 <li class="relative"><a
                     class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
@@ -375,224 +378,235 @@
         </nav>
       </div>
     </div>
-    <div class="min-w-0 max-w-4xl flex-auto px-4 pt-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:pl-16">
-      <div>
+    <div class="min-w-0 max-w-2xl flex-auto px-4 pt-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16">
+      <article>
+        <header class="mb-9">
+          <p class="font-display text-sm font-semibold text-sky-500 mb-1">Introduction</p>
+          <h1 class="font-display text-3xl tracking-tight text-slate-900 font-semibold">Getting started</h1>
+          <div class="flex space-x-4 mt-4">
+              <div class="flex-none">
+                  <img class="rounded-full" width="40" height="40" src="img/joshua.jpg" alt="Joshua Birdman">
+              </div>
+              <div class="flex-1">
+                  <p class="font-display font-semibold text-sm text-slate-900">Joshua Birdman</p>
+                  <p class="text-sm text-slate-500">Created: May 06, 2023 - Updated: Apr 26, 2023</p>
+              </div>
+              <div class="flex-none">
+                <a href="#" class="rounded-md bg-sky-50 px-2.5 py-1.5 text-sm font-semibold font-display text-sky-500 shadow-sm hover:bg-sky-100">Follow</a>
+              </div>
+          </div>
+          <p class="text-lg text-slate-600 mt-9">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur culpa qui officia deserunt.</p>
+        </header>
+        <div class="prose prose-slate max-w-none prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-semibold lg:prose-headings:scroll-mt-[8.5rem] prose-lead:text-slate-500 prose-a:font-semibold prose-a:no-underline prose-pre:rounded-xl prose-pre:bg-slate-900 prose-pre:shadow-lg">
+          <h2 id="quick-start">Quick start</h2>
+          <p>Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa
+            praesentium dolor error cumque velit tenetur.</p>
+          <h3 id="installing-dependencies">Installing dependencies</h3>
+          <p>Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa
+            praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui
+            quia necessitatibus.</p>
+<pre class="prism-code language-shell">
+<code>plugins: [
+  require('@tailwindcss/forms'),
+  require('@tailwindcss/typography'),
+]
+</code></pre>
+          <p>Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet
+            possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores
+            vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.</p>
+
+          <h3 id="configuring-the-library">Configuring the library</h3>
+          <p>Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa
+            praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui
+            quia necessitatibus.</p>
+          <p>Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet
+            possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores
+            vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.</p>
+            
+          <div class="my-8 rounded-2xl p-6 bg-yellow-50">
+            <p class="font-display text-xl text-yellow-900 mt-0 mb-2.5">Consequatur et cum atque mollitia</p>
+            <div class="prose text-yellow-800 [--tw-prose-background:theme(colors.yellow.50)] prose-a:text-yellow-900 prose-code:text-yellow-900">
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur culpa qui officia deserunt mollit laborum.</p>
+            </div>
+          </div>
+          
+          <div class="my-8 rounded-2xl p-6 bg-sky-50">
+            <p class="font-display text-xl text-sky-900 mt-0 mb-2.5">Consequatur et cum atque mollitia</p>
+            <div class="prose text-sky-800 [--tw-prose-background:theme(colors.sky.50)] prose-a:text-sky-900 prose-code:text-sky-900">
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur culpa qui officia deserunt mollit laborum.</p>
+            </div>
+          </div>
+
+          <div class="my-8 rounded-2xl p-6 bg-green-50">
+            <p class="font-display text-xl text-green-900 mt-0 mb-2.5">Consequatur et cum atque mollitia</p>
+            <div class="prose text-green-800 [--tw-prose-background:theme(colors.green.50)] prose-a:text-green-900 prose-code:text-green-900">
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur culpa qui officia deserunt mollit laborum.</p>
+            </div>
+          </div>
+
+          <div class="my-8 rounded-2xl p-6 bg-red-50">
+            <p class="font-display text-xl text-red-900 mt-0 mb-2.5">Consequatur et cum atque mollitia</p>
+            <div class="prose text-red-800 [--tw-prose-background:theme(colors.red.50)] prose-a:text-red-900 prose-code:text-red-900">
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur culpa qui officia deserunt mollit laborum.</p>
+            </div>
+          </div>
+          <hr>
+          <h2 id="basic-usage">Basic usage</h2>
+          <p>Praesentium laudantium magni. Consequatur reiciendis aliquid nihil iusto ut in et. Quisquam ut et aliquid
+            occaecati. Culpa veniam aut et voluptates amet perspiciatis. Qui exercitationem in qui. Vel qui
+            dignissimos sit quae distinctio.</p>
+          <h3 id="your-first-cache">Your first cache</h3>
+          <p>Minima vel non iste debitis. Consequatur repudiandae et quod accusamus sit molestias consequatur aperiam.
+            Et sequi ipsa eum voluptatibus ipsam. Et quisquam ut.</p>
+          <p>Qui quae esse aspernatur fugit possimus. Quam sed molestiae temporibus. Eum perferendis dignissimos
+            provident ea et. Et repudiandae quasi accusamus consequatur dolore nobis. Quia reiciendis necessitatibus a
+            blanditiis iste quia. Ut quis et amet praesentium sapiente.</p>
+          <h4>Change your password</h4>
+          <ol class="ol-pretty uk-list-large">
+            <li>Click your team name to open the Team Menu.</li>
+            <li>Select Profile &amp; account. This will open your profile on the right side of your screen.</li>
+            <li>Under your name, click Account Settings. This will open your Account settings.</li>
+            <li>By Password, click expand.</li>
+            <li>Enter your Current Password, and then a New Password.</li>
+            <li>Click Save Password.</li>
+          </ol>
+          <p>Ea est autem fugiat velit esse a alias earum. Dolore non amet soluta eos libero est. Consequatur qui
+            aliquam qui odit eligendi ut impedit illo dignissimos.</p>
+          <p>Ut dolore qui aut nam. Natus temporibus nisi voluptatum labore est ex error vel officia. Vero repellendus
+            ut. Suscipit voluptate et placeat. Eius quo corporis ab et consequatur quisquam. Nihil officia facere
+            dolorem occaecati alias deleniti deleniti in.</p>   
+          <div class="overflow-x-auto">       
+            <div class="inline-block min-w-full align-middle">
+              <table class="min-w-full divide-y divide-gray-300">
+                <thead>
+                  <tr>
+                    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Name</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Email</th>
+                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Role</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">John Smith</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Front-end Developer</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">johnsmith@example.com</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">John Smith</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Front-end Developer</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">johnsmith@example.com</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
+                  </tr>
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">John Smith</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Front-end Developer</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">johnsmith@example.com</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Member</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3 id="adding-middleware">Adding middleware</h3>
+          <p>Officia nobis tempora maiores id iusto magni reprehenderit velit. Quae dolores inventore molestiae
+            perspiciatis aut. Quis sequi officia quasi rem officiis officiis. Nesciunt ut cupiditate. Sunt aliquid
+            explicabo enim ipsa eum recusandae. Vitae sunt eligendi et non beatae minima aut.</p>
+          <p>Harum perferendis aut qui quibusdam tempore laboriosam voluptatum qui sed. Amet error amet totam
+            exercitationem aut corporis accusantium dolorum. Perspiciatis aut animi et. Sed unde error ut aut rerum.
+          </p>
+          <p>Ut quo libero aperiam mollitia est repudiandae quaerat corrupti explicabo. Voluptas accusantium sed et
+            doloribus voluptatem fugiat a mollitia. Numquam est magnam dolorem asperiores fugiat. Soluta et fuga amet
+            alias temporibus quasi velit. Laudantium voluptatum perspiciatis doloribus quasi facere. Eveniet deleniti
+            veniam et quia veritatis minus veniam perspiciatis.</p>
+          <hr>
+          <h2 id="getting-help">Getting help</h2>
+          <p>Consequuntur et aut quisquam et qui consequatur eligendi. Necessitatibus dolorem sit. Excepturi cumque
+            quibusdam soluta ullam rerum voluptatibus. Porro illo sequi consequatur nisi numquam nisi autem. Ut
+            necessitatibus aut. Veniam ipsa voluptatem sed.</p>
+          <h3 id="submit-an-issue">Submit an issue</h3>
+          <p>Inventore et aut minus ut voluptatem nihil commodi doloribus consequatur. Facilis perferendis nihil sit
+            aut aspernatur iure ut dolores et. Aspernatur odit dignissimos. Aut qui est sint sint.</p>
+          <p>Facere aliquam qui. Dolorem officia ipsam adipisci qui molestiae. Error voluptatem reprehenderit ex.</p>
+          <p>Consequatur enim quia maiores aperiam et ipsum dicta. Quam ut sit facere sit quae. Eligendi veritatis aut
+            ut veritatis iste ut adipisci illo.</p>
+          <h3 id="join-the-community">Join the community</h3>
+          <p>Praesentium facilis iste aliquid quo quia a excepturi. Fuga reprehenderit illo sequi voluptatem
+            voluptatem omnis. Id quia consequatur rerum consectetur eligendi et omnis. Voluptates iusto labore
+            possimus provident praesentium id vel harum quisquam. Voluptatem provident corrupti.</p>
+          <p>Eum et ut. Qui facilis est ipsa. Non facere quia sequi commodi autem. Dicta autem sit sequi omnis
+            impedit. Eligendi amet dolorum magnam repudiandae in a.</p>
+          <p>Molestiae iusto ut exercitationem dolorem unde iusto tempora atque nihil. Voluptatem velit facere
+            laboriosam nobis ea. Consequatur rerum velit ipsum ipsam. Et qui saepe consequatur minima laborum tempore
+            voluptatum et. Quia eveniet eaque sequi consequatur nihil eos.</p>
+        </div>
+      </article>
+      <dl class="mt-12 flex">
         <div>
-          <p class="font-display text-sm font-bold text-sky-500 mb-1">Introduction</p>
-          <h1 class="font-display text-3xl tracking-tight text-slate-900 font-bold">Overview</h1>
-          <p class="text-lg leading-relaxed text-slate-500 mt-8 max-w-2xl">Sit commodi iste iure molestias qui amet
-            voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat
-            exercitationem consequatur et cum atque mollitia qui quia necessitatibus.</p>
+          <dt class="font-display text-sm font-semibold text-slate-900">Previous</dt>
+          <dd class="mt-1"><a class="text-sm text-slate-600 hover:text-slate-900" href="/"><span aria-hidden="true">←</span> Getting started</a></dd>
         </div>
-        <hr class="border-slate-200 mt-9 mb-14">
-
-        <div class="grid grid-cols-1 gap-6 md:gap-x-12 md:gap-y-14 md:grid-cols-2">
-
-          <div class="relative rounded-xl p-6 shadow-xl shadow-slate-200 bg-sky-500 group overflow-hidden">
-            <div class="relative">
-              <h2 class="font-display font-bold text-xl text-white">Ready to get started?</h2>
-              <p class="mt-2 text-base text-slate-100 leading-relaxed max-w-[18rem]">Step-by-step guides to setting up
-                your
-                system and installing the library.</p>
-              <div
-                class="inline-block mt-4 rounded-md bg-sky-600 px-2.5 py-1.5 text-sm font-semibold font-display text-white group-hover:bg-sky-700">
-                Quick start</div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.4"
-              stroke="currentColor" class="absolute bottom-0 right-2 text-sky-400 w-36 h-36">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-            </svg>
-            <a href="doc.html" class="absolute inset-0" aria-label="Category"></a>
-          </div>
-
-          <div class="relative rounded-xl p-6 shadow-xl shadow-slate-200 bg-sky-500 group">
-            <div class="relative">
-              <h2 class="font-display font-bold text-xl text-white">New to platform?</h2>
-              <p class="mt-2 text-base text-slate-100 leading-relaxed max-w-[18rem]">Step-by-step guides to setting up
-                your
-                system and installing the library.</p>
-              <div
-                class="inline-block mt-4 rounded-md bg-sky-600 px-2.5 py-1.5 text-sm font-semibold font-display text-white group-hover:bg-sky-700">
-                Try tutorial</div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.4"
-              stroke="currentColor" class="absolute bottom-0 right-2 text-sky-400 w-36 h-36">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-            </svg>
-            <a href="doc.html" class="absolute inset-0" aria-label="Category"></a>
-          </div>
-
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Core concepts</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Tutorials</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  How-to guides</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Reference guides</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-lg group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Conceptual guides</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-          <div>
-            <div class="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 text-slate-900">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
-              </svg>
-              <a href="doc.html" class="group flex items-center space-x-3 text-slate-900 hover:text-sky-500">
-                <h2
-                  class="font-display font-bold text-xl group-hover:underline underline-offset-4 decoration-1 text-sky-500">
-                  Video library</h2>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-4 h-4 text-slate-400 group-hover:text-sky-500 mt-0.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-                <span
-                  class="flex items-center space-x-2 border border-sky-100 px-1.5 py-0.5 rounded group-hover:border-sky-200">
-                  <span class="uppercase text-[0.6875rem] text-slate-500 group-hover:text-sky-500">18 articles</span>
-                </span>
-              </a>
-            </div>
-            <p class="mt-4 text-base text-slate-500 leading-relaxed max-w-[23rem]">Sint ipsa praesentium dolor error
-              cumque velit tenetur quaerat exercitationem consequatur et cum atque mollitia qui quia.</p>
-          </div>
-
-          <div
-            class="md:col-span-2 relative rounded-xl p-8 shadow-xl shadow-slate-200 bg-sky-950 group overflow-hidden">
-            <div class="relative">
-              <h2 class="font-display font-bold text-2xl text-white">Ready to get started?</h2>
-              <p class="mt-3 text-base text-slate-100 leading-relaxed max-w-2xl">Step-by-step guides to setting up your
-                system and installing the library atep-by-step guides to setting up your
-                system and installing the library.</p>
-              <div
-                class="inline-block mt-6 rounded-md bg-sky-500 px-3.5 py-2 text-sm font-semibold font-display text-white group-hover:bg-sky-600">
-                Quick start</div>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.3"
-              stroke="currentColor" class="absolute bottom-2 right-6 text-sky-900 w-44 h-44">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-            </svg>
-            <a href="doc.html" class="absolute inset-0" aria-label="Category"></a>
-          </div>
-
+        <div class="ml-auto text-right">
+          <dt class="font-display text-sm font-semibold text-slate-900">Next</dt>
+          <dd class="mt-1"><a class="text-sm text-slate-600 hover:text-slate-900" href="/docs/understanding-caching">Understanding caching<!-- --> <span aria-hidden="true">→</span></a></dd>
         </div>
+      </dl>
+      <div class="mt-12 flex flex-col items-center space-y-6 border-t border-slate-200 pt-10">
+        <h3 class="font-display font-semibold text-slate-900 text-lg">Was this article helpful?</h3>
+        <div class="flex space-x-4">
+          <button type="button" class="flex items-center space-x-2 min-w-[3.75rem] rounded-md bg-sky-50 px-2.5 py-1.5 text-sm font-semibold font-display text-sky-500 shadow-sm hover:bg-sky-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            <span>Yes</span>  
+          </button>
+          <button type="button" class="flex items-center space-x-2 min-w-[3.75rem] rounded-md bg-sky-50 px-2.5 py-1.5 text-sm font-semibold font-display text-sky-500 shadow-sm hover:bg-sky-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <span>No</span>  
+          </button>
+        </div>
+        <p class="text-slate-700 text-sm">Have more questions? <a class="underline hover:text-sky-500" href="#">Submit a request.</a></p>
       </div>
+    </div>
+    <div class="hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+      <nav id="toc" aria-labelledby="on-this-page-title" class="w-56">
+        <h2 id="on-this-page-title" class="font-display text-sm font-semibold text-slate-900">On this
+          page</h2>
+        <ol class="mt-4 space-y-3 text-sm">
+          <li>
+            <h3><a class="font-normal text-slate-500 hover:text-slate-900" href="#quick-start">Quick start</a></h3>
+            <ol class="mt-2 space-y-3 pl-5 text-slate-500">
+              <li><a class="hover:text-slate-900" href="#installing-dependencies">Installing
+                  dependencies</a></li>
+              <li><a class="hover:text-slate-900" href="#configuring-the-library">Configuring
+                  the library</a></li>
+            </ol>
+          </li>
+          <li>
+            <h3><a class="font-normal text-slate-500 hover:text-slate-900"
+                href="#basic-usage">Basic usage</a></h3>
+            <ol class="mt-2 space-y-3 pl-5 text-slate-500">
+              <li><a class="hover:text-slate-900" href="#your-first-cache">Your first
+                  cache</a></li>
+              <li><a class="hover:text-slate-900" href="#adding-middleware">Adding
+                  middleware</a></li>
+            </ol>
+          </li>
+          <li>
+            <h3><a class="font-normal text-slate-500 hover:text-slate-900"
+                href="#getting-help">Getting help</a></h3>
+            <ol class="mt-2 space-y-3 pl-5 text-slate-500">
+              <li><a class="hover:text-slate-900" href="#submit-an-issue">Submit an
+                  issue</a></li>
+              <li><a class="hover:text-slate-900" href="#join-the-community">Join the
+                  community</a></li>
+            </ol>
+          </li>
+        </ol>
+      </nav>
     </div>
   </div>
 
@@ -755,10 +769,10 @@
             <h2 class="font-display font-semibold text-slate-900">Introduction</h2>
             <ul class="mt-3 space-y-3">
               <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500"
+                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
                   href="/">Overview</a></li>
               <li class="relative"><a
-                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
+                  class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-sky-500 before:bg-sky-500"
                   href="doc.html">Getting started</a></li>
               <li class="relative"><a
                   class="block w-full pl-3.5 before:pointer-events-none before:absolute before:left-0.5 before:top-1/2 before:h-0.5 before:w-1.5 before:-translate-y-1/2 text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-900 hover:before:block"
@@ -845,4 +859,5 @@
   </div>
 
 </body>
+
 </html>
